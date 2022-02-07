@@ -13,7 +13,7 @@ This project was been shared on a telegram group, I will reshare here publicly s
 - Trigger
 - AS and AIDE supported
 
-#Credits
+# Credits
 Pmods Sausage
 
 # DISCLAIMER
