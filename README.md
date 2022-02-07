@@ -1,4 +1,4 @@
-# CoDM ESP Mod Menu
+# CoDM ESP & Aimbot Mod Menu
 This project was been shared on a telegram group, I will reshare here publicly so it is more known
 
 ![](https://i.imgur.com/EpttQ8B.png)
