@@ -1,7 +1,6 @@
 #include "Il2Cpp.h"
 
 #include "Includes.h"
-#include "fake_dlfcn.h"
 
 #define LOG_TAG "Chitoge-Il2Cpp"
 
@@ -34,33 +33,33 @@ namespace {
 // =========================================================================== //
 void Il2CppAttach(const char *name)
 {
-    void *handle = dlopen_ex(name, 0);
+    void *handle = dlopen(name, 4);
     while (!handle) {
-        handle = dlopen_ex(name, 0);
+        handle = dlopen(name, 4);
         sleep(1);
     }
 
-    il2cpp_assembly_get_image = (const void *(*)(const void *)) dlsym_ex(handle, "il2cpp_assembly_get_image");
-    il2cpp_domain_get = (void *(*)()) dlsym_ex(handle, "il2cpp_domain_get");
-    il2cpp_domain_get_assemblies = (void **(*)(const void* , size_t*)) dlsym_ex(handle, "il2cpp_domain_get_assemblies");
-    il2cpp_image_get_name = (const char *(*)(void *)) dlsym_ex(handle, "il2cpp_image_get_name");
-    il2cpp_class_from_name = (void* (*)(const void*, const char*, const char *)) dlsym_ex(handle, "il2cpp_class_from_name");
-    il2cpp_class_get_field_from_name = (void* (*)(void*, const char *)) dlsym_ex(handle, "il2cpp_class_get_field_from_name");
-    il2cpp_class_get_method_from_name = (void* (*)(void *, const char*, int)) dlsym_ex(handle, "il2cpp_class_get_method_from_name");
-    il2cpp_field_get_offset = (size_t (*)(void *)) dlsym_ex(handle, "il2cpp_field_get_offset");
-    il2cpp_field_static_get_value = (void (*)(void*, void *)) dlsym_ex(handle, "il2cpp_field_static_get_value");
-    il2cpp_field_static_set_value = (void (*)(void*, void *)) dlsym_ex(handle, "il2cpp_field_static_set_value");
-    il2cpp_array_new = (void *(*)(void*, size_t)) dlsym_ex(handle, "il2cpp_array_new");
-    il2cpp_string_chars = (uint16_t *(*)(void*)) dlsym_ex(handle, "il2cpp_string_chars");
-    il2cpp_string_new = (Il2CppString *(*)(const char *)) dlsym_ex(handle, "il2cpp_string_new");
-    il2cpp_string_new_utf16 = (Il2CppString *(*)(const wchar_t *, int32_t)) dlsym_ex(handle, "il2cpp_string_new");
-    il2cpp_type_get_name = (char *(*)(void *)) dlsym_ex(handle, "il2cpp_type_get_name");
-    il2cpp_method_get_param = (void *(*)(void *, uint32_t)) dlsym_ex(handle, "il2cpp_method_get_param");
-    il2cpp_class_get_methods = (void *(*)(void *, void **)) dlsym_ex(handle, "il2cpp_class_get_methods");
-    il2cpp_method_get_name = (const char *(*)(void *)) dlsym_ex(handle, "il2cpp_method_get_name");
-    il2cpp_object_new = (void *(*)(void *)) dlsym_ex(handle, "il2cpp_object_new");
+    il2cpp_assembly_get_image = (const void *(*)(const void *)) dlsym(handle, "il2cpp_assembly_get_image");
+    il2cpp_domain_get = (void *(*)()) dlsym(handle, "il2cpp_domain_get");
+    il2cpp_domain_get_assemblies = (void **(*)(const void* , size_t*)) dlsym(handle, "il2cpp_domain_get_assemblies");
+    il2cpp_image_get_name = (const char *(*)(void *)) dlsym(handle, "il2cpp_image_get_name");
+    il2cpp_class_from_name = (void* (*)(const void*, const char*, const char *)) dlsym(handle, "il2cpp_class_from_name");
+    il2cpp_class_get_field_from_name = (void* (*)(void*, const char *)) dlsym(handle, "il2cpp_class_get_field_from_name");
+    il2cpp_class_get_method_from_name = (void* (*)(void *, const char*, int)) dlsym(handle, "il2cpp_class_get_method_from_name");
+    il2cpp_field_get_offset = (size_t (*)(void *)) dlsym(handle, "il2cpp_field_get_offset");
+    il2cpp_field_static_get_value = (void (*)(void*, void *)) dlsym(handle, "il2cpp_field_static_get_value");
+    il2cpp_field_static_set_value = (void (*)(void*, void *)) dlsym(handle, "il2cpp_field_static_set_value");
+    il2cpp_array_new = (void *(*)(void*, size_t)) dlsym(handle, "il2cpp_array_new");
+    il2cpp_string_chars = (uint16_t *(*)(void*)) dlsym(handle, "il2cpp_string_chars");
+    il2cpp_string_new = (Il2CppString *(*)(const char *)) dlsym(handle, "il2cpp_string_new");
+    il2cpp_string_new_utf16 = (Il2CppString *(*)(const wchar_t *, int32_t)) dlsym(handle, "il2cpp_string_new");
+    il2cpp_type_get_name = (char *(*)(void *)) dlsym(handle, "il2cpp_type_get_name");
+    il2cpp_method_get_param = (void *(*)(void *, uint32_t)) dlsym(handle, "il2cpp_method_get_param");
+    il2cpp_class_get_methods = (void *(*)(void *, void **)) dlsym(handle, "il2cpp_class_get_methods");
+    il2cpp_method_get_name = (const char *(*)(void *)) dlsym(handle, "il2cpp_method_get_name");
+    il2cpp_object_new = (void *(*)(void *)) dlsym(handle, "il2cpp_object_new");
 
-    dlclose_ex(handle);
+    dlclose(handle);
 }
 // =========================================================================== //
 typedef unsigned short UTF16;
