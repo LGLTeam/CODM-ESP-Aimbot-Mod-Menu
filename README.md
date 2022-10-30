@@ -1,7 +1,7 @@
 # CoDM ESP & Aimbot Mod Menu
 This project was been shared on a telegram group, I will reshare here publicly so it is more known
 
-![](https://i.imgur.com/EpttQ8B.png)
+![](photo_2022-10-30_20-31-04.jpg)
 
 # Features
 - Auto update
