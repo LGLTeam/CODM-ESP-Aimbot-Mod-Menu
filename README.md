@@ -14,9 +14,9 @@ This project was been shared on a telegram group, I will reshare here publicly s
 - AS and AIDE supported
 
 # Credits
-Pmods Sausage
+Me and me only no one else deserve the credit except orignal creator. Fuckk all copy pasters here useless shits dont even know to handle pointer and call them selves a native modder suck my d**k
 
 # DISCLAIMER
-**THE SOURCE IS OLD AND MAY NOT WORK ON LATEST VERSION DUE TO CHANGES. YOU MUST UPDATE AND FIX CODES BY YOURSELF! NO QUESTION ASKED!**
+**THE SOURCE IS OLD AND REPLACED WITH NEW FILES SO THE KNOWN BUG HAS BEEN FIXED AND MORE YOU MUST UPDATE AND FIX ERROS BY YOURSELF! NO QUESTION ASKED!**
 
 **THIS PROJECT IS FOR EDUCATIONAL USE ONLY. WE DO NOT CONDONE THIS PROJECT BEING USED TO GAIN AN ADVANTAGE AGAINST OTHER PEOPLE. WE ARE NOT RESPONSIBLE FOR ANY DAMAGES**
