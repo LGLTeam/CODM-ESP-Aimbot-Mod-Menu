@@ -9,7 +9,7 @@ JNIEXPORT jstring
 JNICALL
 Java_com_gotoubun_Floating_Title(JNIEnv *env, jobject thiz) {
     titleValid = true;
-    return env->NewStringUTF(("PMods Sausage"));
+    return env->NewStringUTF(("LOL DONT USE THIS PRJECT NOOB"));
 }
 }
 void native_onSendConfig(JNIEnv *env, jobject thiz, jstring s, jstring v) {
